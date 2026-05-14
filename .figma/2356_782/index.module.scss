@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+.frame {
+  position: relative;
+  width: 375px;
+  height: 667px;
+  overflow: hidden;
+
+  .rectangle1 {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #ffffff;
+    padding-bottom: 512px;
+    width: 375px;
+    height: 667px;
+
+    .rectangle3 {
+      display: flex;
+      align-items: center;
+      align-self: stretch;
+      justify-content: space-between;
+      border: 1px solid #000000;
+      background: #daf0d0;
+      padding: 3px 166px 3px 2px;
+      min-width: 375px;
+      height: 48px;
+
+      .chevronLeft {
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+      }
+
+      .text {
+        line-height: 24px;
+        letter-spacing: 0;
+        color: #000000;
+        font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+        font-size: 20px;
+      }
+    }
+
+    .rectangle27 {
+      display: flex;
+      align-items: flex-start;
+      align-self: stretch;
+      margin: 26px 84px 0px 23px;
+      border: 1px solid #006b57;
+      border-radius: 20px;
+      background: #daf0d0;
+      padding: 13px 12px 9px;
+
+      .text2 {
+        width: 242px;
+        letter-spacing: 0;
+        color: #000000;
+        font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .rectangle28 {
+    display: flex;
+    position: absolute;
+    top: 606px;
+    left: 0;
+    align-items: flex-start;
+    border-radius: 21px;
+    background: #daf0d0;
+    padding: 14px 55px 28px 17px;
+    width: 375px;
+    height: 78px;
+
+    .rectangle29 {
+      display: flex;
+      flex-grow: 1;
+      align-items: center;
+      border: 1px solid #006b57;
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 5px 147px 5px 17px;
+
+      .text3 {
+        line-height: 24px;
+        letter-spacing: 0;
+        color: #8f928d;
+        font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .arrowLeftCircle {
+    position: absolute;
+    top: 623px;
+    left: 326px;
+    width: 33px;
+    height: 33px;
+    overflow: hidden;
+    rotate: 90deg;
+  }
+}

@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+}
+
+.formSlot {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid #006b57;
+  border-radius: 8px;
+  background: var(--sds-color-background-default-default);
+  padding: 23px;
+  width: 333px;
+  height: 164px;
+  row-gap: 24px;
+
+  .textSmall {
+    flex-shrink: 0;
+    line-height: 17px;
+    letter-spacing: 0;
+    color: #6b6b6b;
+    font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+  }
+
+  .text {
+    flex-shrink: 0;
+    line-height: 20px;
+    letter-spacing: 0;
+    color: var(--sds-color-text-default-default);
+    font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+  }
+
+  .slot {
+    flex-shrink: 0;
+    width: 272px;
+    height: 240px;
+  }
+
+  .genericAvatar {
+    position: absolute;
+    top: 15px;
+    left: 13px;
+    flex-shrink: 0;
+    border-radius: 100px;
+    width: 36px;
+    height: 36px;
+    overflow: hidden;
+  }
+
+  .text2 {
+    display: inline-flex;
+    position: absolute;
+    top: 13px;
+    left: 56px;
+    flex-shrink: 0;
+    align-items: flex-start;
+    z-index: 1;
+    border: 1px solid #006b57;
+    width: 28px;
+    height: 20px;
+  }
+
+  .textSmall2 {
+    display: inline-flex;
+    position: absolute;
+    top: 32px;
+    left: 56px;
+    flex-shrink: 0;
+    align-items: flex-start;
+    z-index: 2;
+    border: 1px solid #006b57;
+    width: 52px;
+    height: 17px;
+  }
+
+  .moreHorizontal {
+    position: absolute;
+    top: 13px;
+    left: 302px;
+    flex-shrink: 0;
+    z-index: 3;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+  }
+
+  .textSmall3 {
+    display: inline-flex;
+    position: absolute;
+    top: 63px;
+    left: 14px;
+    flex-shrink: 0;
+    align-items: flex-start;
+    z-index: 4;
+    border: 1px solid #006b57;
+    width: 85px;
+    height: 20px;
+  }
+
+  .rectangle6 {
+    display: flex;
+    position: absolute;
+    top: 89px;
+    left: 9px;
+    flex-shrink: 0;
+    align-items: flex-start;
+    justify-content: space-between;
+    z-index: 5;
+    border: 1px solid #006b57;
+    background: #ededed;
+    padding: 1px 67px 5px 4px;
+    width: 313px;
+    height: 42px;
+
+    .playCircle {
+      margin-top: 4px;
+      width: 30px;
+      height: 30px;
+      overflow: hidden;
+    }
+
+    .autoWrapper {
+      position: relative;
+      width: 197px;
+      height: 22px;
+
+      .text4 {
+        display: inline-flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        align-items: flex-start;
+        border: 1px solid #006b57;
+        width: 197px;
+        height: 22px;
+
+        .text3 {
+          flex-shrink: 0;
+          line-height: 22px;
+          letter-spacing: 0;
+          color: var(--sds-color-text-default-default);
+          font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+          font-size: 16px;
+        }
+      }
+
+      .textSmall4 {
+        display: inline-flex;
+        position: absolute;
+        bottom: -14px;
+        left: 1px;
+        align-items: flex-start;
+        border: 1px solid #006b57;
+        width: 66px;
+        height: 17px;
+      }
+    }
+  }
+
+  .messageCircle {
+    position: absolute;
+    top: 136px;
+    left: 266px;
+    flex-shrink: 0;
+    z-index: 6;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+  }
+
+  .thumbsUp {
+    position: absolute;
+    top: 136px;
+    left: 229px;
+    flex-shrink: 0;
+    z-index: 7;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+  }
+
+  .externalLink {
+    position: absolute;
+    top: 136px;
+    left: 302px;
+    flex-shrink: 0;
+    z-index: 8;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+  }
+}

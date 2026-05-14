@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+.component18 {
+  display: flex;
+  align-items: center;
+  width: 269px;
+  height: 24px;
+
+  .text {
+    width: 70px;
+    height: 20px;
+    line-height: 20px;
+    letter-spacing: 0;
+    color: var(--sds-color-text-default-default);
+    font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+  }
+
+  .star56 {
+    margin-left: 12px;
+    width: 25px;
+    height: 24px;
+  }
+
+  .star60 {
+    margin-left: 5px;
+    width: 26px;
+    height: 24px;
+  }
+
+  .star59 {
+    margin-left: 5px;
+    width: 25px;
+    height: 24px;
+  }
+
+  .star57 {
+    margin-left: 6px;
+    width: 25px;
+    height: 24px;
+  }
+
+  .text2 {
+    margin: 0px 0px 0px 17px;
+    line-height: 20px;
+    letter-spacing: 0;
+    color: var(--sds-color-text-default-default);
+    font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+  }
+}

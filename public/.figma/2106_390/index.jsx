@@ -1,0 +1,16 @@
+import React from 'react';
+
+import styles from './index.module.scss';
+
+const Component = () => {
+  return (
+    <p className={styles.text}>
+      你已
+      <br />
+      练习了
+      <br />
+    </p>
+  );
+}
+
+export default Component;

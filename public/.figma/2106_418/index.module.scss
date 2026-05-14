@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+.textContentHeading {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 119px;
+  height: 61px;
+  row-gap: 8px;
+
+  .heading {
+    flex-shrink: 0;
+    align-self: stretch;
+    line-height: 29px;
+    letter-spacing: -0.48px;
+    color: var(--sds-color-text-default-default);
+    font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .subheading {
+    flex-shrink: 0;
+    align-self: stretch;
+    line-height: 24px;
+    letter-spacing: 0;
+    color: var(--sds-color-text-default-secondary);
+    font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+  }
+}

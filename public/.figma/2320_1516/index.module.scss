@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+.group2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 1px;
+  width: 144px;
+  height: 21px;
+
+  .button2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+    border: 1px solid var(--sds-color-border-brand-default);
+    border-radius: 8px;
+    background: var(--sds-color-background-brand-secondary);
+    padding: 11px;
+    width: 66px;
+    height: 21px;
+    overflow: hidden;
+
+    .button {
+      flex-shrink: 0;
+      line-height: 12px;
+      letter-spacing: 0;
+      color: #303030;
+      font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+      font-size: 12px;
+    }
+  }
+}

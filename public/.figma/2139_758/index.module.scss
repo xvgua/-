@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+.component3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 266px;
+  height: 36px;
+
+  .star51 {
+    width: 38px;
+    height: 36px;
+  }
+
+  .star54 {
+    width: 37px;
+    height: 36px;
+  }
+
+  .text {
+    line-height: 29px;
+    letter-spacing: 0;
+    color: #000000;
+    font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+    font-size: 24px;
+  }
+}

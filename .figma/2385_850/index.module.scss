@@ -1,0 +1,191 @@
+* {
+  box-sizing: border-box;
+}
+
+.frame {
+  position: relative;
+  width: 375px;
+  height: 667px;
+  overflow: hidden;
+
+  .rectangle24 {
+    border-radius: 8px;
+    width: 334px;
+    height: 131px;
+  }
+
+  .chevronLeft {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+  }
+
+  .rectangle1 {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    padding-bottom: 153px;
+    width: 375px;
+    height: 667px;
+
+    .rectangle5 {
+      display: flex;
+      align-items: center;
+      align-self: stretch;
+      justify-content: space-between;
+      background: #daf0d0;
+      padding: 4px 152px 4px 0px;
+      min-width: 375px;
+      height: 48px;
+
+      .text {
+        line-height: 22px;
+        letter-spacing: 0;
+        color: #000000;
+        font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+        font-size: 18px;
+      }
+    }
+
+    .image26 {
+      width: 375px;
+      height: 273px;
+    }
+
+    .component5 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      align-self: stretch;
+      margin: 28px 21px 0px;
+      padding-bottom: 10px;
+
+      .text2 {
+        margin: 6px 0px 0px;
+        width: 122px;
+        height: 18px;
+        letter-spacing: 0;
+        color: #000000;
+        font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+        font-size: 15px;
+      }
+    }
+  }
+
+  .component6 {
+    display: flex;
+    position: absolute;
+    top: 532px;
+    left: 20px;
+    align-items: flex-start;
+    padding-bottom: 34px;
+    width: 334px;
+    height: 165px;
+  }
+
+  .rectangle4 {
+    display: flex;
+    position: absolute;
+    top: 606px;
+    left: 0;
+    align-items: flex-start;
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: #000000;
+    background: #daf0d0;
+    padding: 4px 18px 17px 23px;
+    width: 375px;
+    height: 61px;
+
+    .film {
+      margin-left: 22px;
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+    }
+
+    .feather {
+      margin-left: 134px;
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+    }
+
+    .user {
+      margin-left: 18px;
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+    }
+  }
+
+  .ellipse7 {
+    display: flex;
+    position: absolute;
+    top: 567px;
+    left: 137px;
+    align-items: center;
+    border: 1px solid #a4a4a4;
+    border-radius: 50%;
+    background: #d9d9d9;
+    width: 95px;
+    height: 95px;
+
+    .ellipse8 {
+      display: flex;
+      flex-grow: 1;
+      align-items: flex-start;
+      margin-right: -2px;
+      border: 1px solid #a4a4a4;
+      border-radius: 50%;
+      background: #d9d9d9;
+      padding: 13px 18px 11px 24px;
+
+      .text3 {
+        width: 51px;
+        height: 69px;
+        letter-spacing: 0;
+        color: #000000;
+        font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+        font-size: 24px;
+      }
+    }
+  }
+
+  .text7 {
+    position: absolute;
+    top: 650px;
+    left: 17px;
+    width: 346px;
+    height: 14px;
+    letter-spacing: 0;
+    color: #000000;
+    font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+
+    .text4 {
+      letter-spacing: 0;
+      color: #6b6b6b;
+      font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+      font-size: 12px;
+    }
+
+    .text5 {
+      letter-spacing: 0;
+      color: #1e1e1e;
+      font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+      font-size: 12px;
+    }
+
+    .text6 {
+      letter-spacing: 0;
+      color: #000000;
+      font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+      font-size: 12px;
+    }
+  }
+}

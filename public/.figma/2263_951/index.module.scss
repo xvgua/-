@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+.group11 {
+  display: flex;
+  align-items: flex-start;
+  padding: 108px 1px 2px 189px;
+  width: 334px;
+  height: 131px;
+  background-image: url(../image/mp16plb7-yy95aah.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .group2 {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 1px;
+    width: 144px;
+    min-width: 144px;
+    height: 21px;
+
+    .button2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 8px;
+      border: 1px solid var(--sds-color-border-brand-default);
+      border-radius: 8px;
+      background: var(--Backgrounds-Secondary, #f2f2f7);
+      padding: 11px;
+      width: 66px;
+      height: 21px;
+      overflow: hidden;
+
+      .button {
+        flex-shrink: 0;
+        line-height: 12px;
+        letter-spacing: 0;
+        color: #303030;
+        font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+        font-size: 12px;
+      }
+    }
+  }
+}

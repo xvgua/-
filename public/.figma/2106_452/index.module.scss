@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+.frame {
+  position: relative;
+  width: 375px;
+  height: 667px;
+  overflow: hidden;
+
+  .rectangle1 {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #ffffff;
+    padding: 0px 1px 14px 13px;
+    width: 375px;
+    height: 667px;
+
+    .volumeX {
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+    }
+
+    .autoWrapper {
+      display: flex;
+      align-items: flex-start;
+      align-self: stretch;
+      justify-content: space-between;
+      padding-right: 3px;
+      padding-left: 152px;
+
+      .chevronsUp {
+        margin-top: 3px;
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+      }
+    }
+
+    .a5C234A7D50209E0Fdc0 {
+      display: flex;
+      align-items: flex-start;
+      align-self: stretch;
+      margin-top: 60px;
+      border-radius: 12px;
+      padding: 389px 28px 0px 260px;
+      background-image: url(../image/mp1ai1hf-av7bc7q.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      .rectangle12 {
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        border-radius: 100px;
+        background: #d9d9d9;
+        padding: 22px 13px 22px 12px;
+
+        .text {
+          line-height: 29px;
+          letter-spacing: 0;
+          color: #000000;
+          font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+          font-size: 24px;
+        }
+      }
+    }
+
+    .autoWrapper2 {
+      display: flex;
+      align-items: center;
+      align-self: stretch;
+      justify-content: space-between;
+      margin-top: 40px;
+      padding-right: 49px;
+      padding-left: 51px;
+
+      .pause {
+        width: 48px;
+        height: 48px;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .chevronLeft {
+    position: absolute;
+    top: 3px;
+    left: -1px;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+  }
+}

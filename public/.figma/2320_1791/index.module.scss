@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+.frame {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 3px;
+  padding-bottom: 102px;
+  width: 375px;
+  height: 667px;
+  overflow: hidden;
+
+  .chevronsUp {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+  }
+
+  .rectangle1 {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: flex-start;
+    background: #ffffff;
+    padding: 0px 4px 14px 64px;
+    width: 375px;
+    height: 667px;
+
+    .skipBack {
+      margin-top: 609px;
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+    }
+
+    .autoWrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      align-self: stretch;
+      margin-top: 3px;
+      margin-left: 61px;
+
+      .pause {
+        margin-top: 562px;
+        margin-left: 4px;
+        width: 48px;
+        height: 48px;
+        overflow: hidden;
+      }
+    }
+
+    .skipForward {
+      margin-top: 609px;
+      margin-left: 68px;
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+    }
+
+    .volumeX {
+      margin-left: 6px;
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+    }
+  }
+
+  .autoWrapper2 {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    padding-right: -31px;
+    padding-left: -1px;
+
+    .a5C234A7D50209E0Fdc0 {
+      display: flex;
+      align-items: flex-start;
+      align-self: stretch;
+      margin-top: 62px;
+      padding: 387px 60px 0px 274px;
+      background-image: url(../image/mp1ajusr-pujcqv1.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      .rectangle12 {
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        border-radius: 100px;
+        background: #d9d9d9;
+        padding: 22px 13px 22px 12px;
+
+        .text {
+          line-height: 29px;
+          letter-spacing: 0;
+          color: #000000;
+          font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}

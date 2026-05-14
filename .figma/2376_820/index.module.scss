@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+.frame {
+  position: relative;
+  width: 375px;
+  height: 667px;
+  overflow: hidden;
+
+  .rectangle1 {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    padding-bottom: 208px;
+    width: 375px;
+    height: 667px;
+
+    .autoWrapper {
+      position: relative;
+      width: 375px;
+      height: 219px;
+
+      .line1 {
+        position: absolute;
+        top: 201px;
+        left: 52px;
+        background: #888888;
+        width: 310px;
+        height: 6px;
+      }
+
+      .rectangle13 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 375px;
+        height: 219px;
+
+        .line3 {
+          background: #888888;
+          width: 279px;
+          height: 6px;
+        }
+
+        .star {
+          width: 30px;
+          height: 30px;
+          overflow: hidden;
+        }
+      }
+    }
+
+    .formSlot {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      align-self: stretch;
+      margin: 6px 5px 0px;
+      border: 1px solid #006b57;
+      border-radius: 8px;
+      background: var(--sds-color-background-default-default);
+      padding: 2px 0px 12px 307px;
+
+      .close {
+        margin-left: 33px;
+        width: 24px;
+        height: 24px;
+        overflow: hidden;
+      }
+
+      .button2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 8px;
+        margin-top: 165px;
+        border: 1px solid var(--sds-color-border-brand-default);
+        border-radius: 8px;
+        background: #4da59f;
+        padding: 11px;
+        width: 54px;
+        height: 29px;
+        overflow: hidden;
+
+        .button {
+          flex-shrink: 0;
+          line-height: 16px;
+          letter-spacing: 0;
+          color: var(--sds-color-text-brand-on-brand);
+          font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .line2 {
+    position: absolute;
+    top: 219px;
+    left: -3px;
+    background: #888888;
+    width: 380px;
+    height: 6px;
+  }
+
+  .chevronLeft {
+    position: absolute;
+    top: 3px;
+    left: -1px;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+  }
+
+  .component2 {
+    display: flex;
+    position: absolute;
+    top: 171px;
+    left: -1px;
+    align-items: flex-start;
+    width: 30px;
+    height: 30px;
+
+    .pause {
+      width: 48px;
+      height: 48px;
+      overflow: hidden;
+    }
+  }
+
+  .image21 {
+    position: absolute;
+    top: 446px;
+    left: 0;
+    width: 375px;
+    height: 225px;
+  }
+}

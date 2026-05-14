@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+.rectangle52 {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  width: 334px;
+  height: 131px;
+  background-image: url(../image/mp25ji5a-qqljyfn.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .rectangle5 {
+    border-radius: 8px;
+    width: 334px;
+    height: 131px;
+  }
+}

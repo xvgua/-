@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+.slot {
+  width: 251px;
+  height: 30px;
+  overflow: hidden;
+
+  .label {
+    flex-shrink: 0;
+    line-height: 22px;
+    letter-spacing: 0;
+    color: #767676;
+    font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+  }
+
+  .tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 0px 0px 1px;
+    border-style: solid;
+    border-radius: 4px 4px 0px 0px;
+    border-color: #ceeddf;
+    padding: 4px 12px 3px;
+    width: 84px;
+  }
+
+  .tab2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 0px 0px 1px;
+    border-style: solid;
+    border-radius: 4px 4px 0px 0px;
+    border-color: #ceeddf;
+    padding: 4px 12px 3px;
+    width: 73px;
+  }
+
+  .tab3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 0px 0px 1px;
+    border-style: solid;
+    border-radius: 4px 4px 0px 0px;
+    border-color: #006b57;
+    padding: 4px 12px 3px;
+    width: 94px;
+
+    .label2 {
+      flex-shrink: 0;
+      line-height: 22px;
+      letter-spacing: 0;
+      color: #000000;
+      font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+      font-size: 16px;
+    }
+  }
+}

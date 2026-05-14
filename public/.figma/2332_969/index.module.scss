@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+.cardSlot {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid var(--sds-color-border-default-default);
+  border-radius: 8px;
+  background: #ffffff00;
+  padding: 23px;
+  width: 468px;
+  height: 128px;
+  row-gap: 24px;
+
+  .slot {
+    flex-shrink: 0;
+    width: 192px;
+    height: 120px;
+  }
+}

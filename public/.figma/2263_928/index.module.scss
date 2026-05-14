@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+.group2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-radius: 8px;
+  padding: 109px 1px 1px 189px;
+  width: 334px;
+  height: 131px;
+  background-image: url(../image/mp16plb6-xzmh62o.png);
+  background-position: 1px -17px;
+  background-size: 100% 143.7%;
+  background-repeat: no-repeat;
+
+  .button2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+    border: 1px solid var(--sds-color-border-brand-default);
+    border-radius: 8px;
+    background: var(--sds-color-background-brand-secondary);
+    padding: 11px;
+    width: 66px;
+    height: 21px;
+    overflow: hidden;
+
+    .button {
+      flex-shrink: 0;
+      line-height: 12px;
+      letter-spacing: 0;
+      color: #303030;
+      font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+      font-size: 12px;
+    }
+  }
+}

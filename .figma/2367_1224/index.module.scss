@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+.text3 {
+  width: 346px;
+  height: 14px;
+  letter-spacing: 0;
+  color: #000000;
+  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+
+  .text {
+    letter-spacing: 0;
+    color: #6b6b6b;
+    font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+  }
+
+  .text2 {
+    letter-spacing: 0;
+    color: #000000;
+    font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+  }
+}

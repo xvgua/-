@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+.slot {
+  border: 1px solid var(--sds-color-border-default-default);
+  background: #ffffff00;
+  width: 351px;
+  height: 128px;
+
+  .iconButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+    border: 1px solid var(--sds-color-border-brand-default);
+    border-radius: 1000px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 85px;
+    height: 85px;
+    overflow: hidden;
+    background-image: url(../image/mp2uzed0-djxjak6.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .text {
+    line-height: 22px;
+    letter-spacing: 0;
+    color: var(--sds-color-text-default-default);
+    font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+  }
+}
