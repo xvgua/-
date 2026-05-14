@@ -1,7 +1,6 @@
 <template>
   <div class="practice-view">
     <div class="practice-header-section">
-      <button class="back-button" @click="$router.back()"><img src="/.figma/image/mp192vrw-h9uylsh.svg" alt="返回"></button>
       <div class="search-bar">
         <p class="search-text">找到您想要的教程，点击直接开始练习！</p>
         <svg viewBox="0 0 28 28" fill="none" class="search-icon"><circle cx="12.5" cy="12.5" r="9" stroke="#1E1E1E" stroke-width="2.5"/><line x1="19.5" y1="19.5" x2="25" y2="25" stroke="#1E1E1E" stroke-width="2.5" stroke-linecap="round"/></svg>
@@ -46,8 +45,6 @@ const videos = [
 <style scoped>
 .practice-view { width: 100%; height: 100%; background: #ffffff; display: flex; flex-direction: column; overflow-y: auto; }
 .practice-header-section { position: relative; background: #e5f5de; padding: 9px 18px 46px 44px; width: 100%; }
-.back-button { position: absolute; top: -1px; left: -4px; width: 40px; height: 40px; cursor: pointer; background: none; border: none; padding: 0; z-index: 10; }
-.back-button img { width: 40px; height: 40px; }
 .search-bar { display: flex; align-items: center; border: 1px solid #819b74; border-radius: 5px; background: #daf0d0; padding: 6px 2px 6px 10px; margin-right: 7px; margin-bottom: 10px; }
 .search-text { font-size: 13px; line-height: 16px; color: #6b6b6b; margin: 0; white-space: nowrap; }
 .search-icon { width: 20px; height: 20px; flex-shrink: 0; margin-left: auto; }

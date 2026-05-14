@@ -50,7 +50,7 @@
 
 <style scoped>
 .user-detail-view { width: 100%; height: 100%; background: #ffffff; display: flex; flex-direction: column; overflow-y: auto; }
-.detail-header { display: flex; align-items: center; background: #daf0d0; padding: 8px 24px 9px 30px; height: 51px; min-height: 51px; position: sticky; top: 0; z-index: 100; }
+.detail-header { width: 375px; display: flex; align-items: center; background: #daf0d0; padding: 8px 24px 9px 30px; height: 51px; min-height: 51px; position: sticky; top: 0; z-index: 100; }
 .back-button { width: 40px; height: 40px; cursor: pointer; background: none; border: none; padding: 0; display: flex; align-items: center; justify-content: center; }
 .back-button img { width: 40px; height: 40px; }
 .user-info-section { padding: 20px 24px; border-bottom: 1px solid #e5e5e5; }
