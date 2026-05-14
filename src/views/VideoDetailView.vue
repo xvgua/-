@@ -75,7 +75,7 @@
     <div v-if="isInfoOpen" class="vd-info-overlay" @click.self="closeVideoInfo">
       <div class="vd-info-panel">
         <div class="vd-info-header">
-          <img src="/.figma/image/mp3w72hs-78shkw0.svg" alt="头像" class="vd-info-avatar">
+          <img src="/.figma/image/mp3w72hs-78shkw0.svg" alt="头像" class="vd-info-avatar" @click="$router.push('/author-detail')">
           <div class="vd-info-meta">
             <span class="vd-info-name">太极拳人</span>
             <span class="vd-info-subtitle">太极拳全精通！全部都会厉害吧</span>

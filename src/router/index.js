@@ -22,6 +22,7 @@ import FavoriteSearchView from '@/views/FavoriteSearchView.vue'
 import FavoriteSearchResultView from '@/views/FavoriteSearchResultView.vue'
 import VideoDetailView from '@/views/VideoDetailView.vue'
 import ActivityView from '@/views/ActivityView.vue'
+import AuthorDetailView from '@/views/AuthorDetailView.vue'
 
 const routes = [
   { path: '/', name: 'home', component: HomeView },
@@ -47,6 +48,7 @@ const routes = [
   { path: '/favorite-search-result', name: 'favoriteSearchResult', component: FavoriteSearchResultView },
   { path: '/video-detail', name: 'videoDetail', component: VideoDetailView },
   { path: '/activity', name: 'activity', component: ActivityView },
+  { path: '/author-detail', name: 'authorDetail', component: AuthorDetailView },
 ]
 
 const router = createRouter({
