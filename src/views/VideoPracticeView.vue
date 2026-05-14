@@ -69,6 +69,9 @@
         <button class="control-btn" @click="switchScene"><img src="/.figma/image/mp4vrs1s-iy5raom.svg" alt="前进"></button>
       </div>
     </div>
+    <div v-if="countdownValue > 0" class="countdown-overlay">
+      <span class="countdown-number">{{ countdownValue }}</span>
+    </div>
   </div>
 </template>
 
@@ -82,19 +85,34 @@ const isPlaying = ref(true)
 const isZoomed = ref(false)
 const isMuted = ref(false)
 const isFavorited = ref(false)
+const countdownValue = ref(0)
 let autoSwitchTimer = null
 let practiceTimer = null
 let longPressTimer = null
+let countdownInterval = null
 const SWITCH_INTERVAL = 3000
 const PRACTICE_DURATION = 20000
 const LONG_PRESS_DURATION = 3000
 
 const startLongPress = () => {
+  countdownValue.value = 3
+  countdownInterval = setInterval(() => {
+    if (countdownValue.value > 1) {
+      countdownValue.value--
+    } else {
+      clearInterval(countdownInterval)
+      countdownInterval = null
+      countdownValue.value = 0
+      router.push('/practice-complete')
+    }
+  }, 1000)
   longPressTimer = setTimeout(() => {
     router.push('/practice-complete')
   }, LONG_PRESS_DURATION)
 }
 const cancelLongPress = () => {
+  countdownValue.value = 0
+  if (countdownInterval) { clearInterval(countdownInterval); countdownInterval = null }
   if (longPressTimer) { clearTimeout(longPressTimer); longPressTimer = null }
 }
 
@@ -111,7 +129,7 @@ const startTimer = () => { clearTimer(); practiceTimer = setTimeout(() => { rout
 const clearTimer = () => { if (practiceTimer) { clearTimeout(practiceTimer); practiceTimer = null } }
 
 onMounted(() => { startSwitch(); startTimer() })
-onUnmounted(() => { stopSwitch(); clearTimer(); cancelLongPress() })
+onUnmounted(() => { stopSwitch(); clearTimer(); cancelLongPress(); if (countdownInterval) { clearInterval(countdownInterval); countdownInterval = null } })
 </script>
 
 <style scoped>
@@ -148,4 +166,7 @@ onUnmounted(() => { stopSwitch(); clearTimer(); cancelLongPress() })
 .zoomed-image { width: 100%; max-width: 361px; height: 462px; border-radius: 12px; object-fit: cover; }
 .zoomed-badge { position: absolute; bottom: 40px; right: 22px; display: flex; align-items: center; justify-content: center; border-radius: 100px; background: #e5f5de; padding: 22px 13px; min-width: 73px; min-height: 73px; opacity: 0.6; }
 .zoomed-controls { display: flex; align-items: center; justify-content: space-between;width: 260px;margin-left:58px;margin-bottom:16px }
+.countdown-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.6); display: flex; align-items: center; justify-content: center; z-index: 9999; }
+.countdown-number { font-size: 120px; font-weight: 700; color: #ffffff; text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 4px 8px rgba(0, 0, 0, 0.3); font-family: "PingFang SC", sans-serif; animation: countdown-pop 0.8s ease-out; }
+@keyframes countdown-pop { 0% { transform: scale(1.5); opacity: 0; } 50% { opacity: 1; } 100% { transform: scale(1); opacity: 1; } }
 </style>

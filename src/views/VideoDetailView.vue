@@ -82,7 +82,7 @@
           </div>
           <img src="/.figma/image/mp3w72hs-a1y45cf.svg" alt="关闭" class="vd-info-close" @click="closeVideoInfo">
         </div>
-        <button class="vd-info-follow-btn">关注</button>
+        <button class="vd-info-follow-btn" :class="{ 'vd-info-unfollow': isFollowed }" @click="toggleFollow">{{ isFollowed ? '取关' : '关注' }}</button>
         <span class="vd-info-label">视频简介：</span>
         <p class="vd-info-text">简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介。。。。。。。。。。。。</p>
         <div class="vd-info-rating">
@@ -109,6 +109,7 @@ const isStarred = ref(false)
 const isDetailStep = ref(false)
 const isCommentOpen = ref(false)
 const isInfoOpen = ref(false)
+const isFollowed = ref(false)
 const newComment = ref('')
 const detailVideoSrc = computed(() => isDetailStep.value ? '/.figma/image/mp3t6n1m-yagbssi.png' : '/.figma/image/mp3r27oe-3zheg6h.png')
 const detailFigureSrc = computed(() => isDetailStep.value ? '/.figma/image/mp3tg4yo-w6aykqt.png' : '/.figma/image/mp3r27oe-3zheg6h.png')
@@ -145,6 +146,15 @@ const sendComment = () => {
 }
 const openVideoInfo = () => { isInfoOpen.value = true }
 const closeVideoInfo = () => { isInfoOpen.value = false }
+const toggleFollow = () => {
+  if (isFollowed.value) {
+    if (window.confirm('确认取关太极拳人吗？')) {
+      isFollowed.value = false
+    }
+  } else {
+    isFollowed.value = true
+  }
+}
 const prevPage = () => { if (currentPage.value > 1) { currentPage.value--; isDetailStep.value = !isDetailStep.value } }
 const nextPage = () => { if (currentPage.value < 13) { currentPage.value++; isDetailStep.value = !isDetailStep.value } }
 
@@ -603,6 +613,12 @@ onUnmounted(() => {
   cursor: pointer;
   overflow: hidden;
   font-family: Inter, "PingFang SC", sans-serif;
+}
+
+.vd-info-unfollow {
+  border-color: #4da59f;
+  background: #e5f5de;
+  color: #000000;
 }
 
 .vd-info-label {
