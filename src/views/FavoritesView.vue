@@ -25,7 +25,7 @@
     <div class="favorite-video-list">
       <div class="favorite-video-card" v-for="(video, idx) in videos" :key="video.id">
         <div class="favorite-card-image-wrapper">
-          <img :src="video.image" alt="视频" class="favorite-card-image" @click="$router.push('/video-practice')">
+          <img :src="video.image" alt="视频" class="favorite-card-image" @click="$router.push('/video-detail')">
           <div class="favorite-card-overlay"><div class="favorite-card-actions"><button class="action-button" @click.stop="pinTop(idx)">置顶</button><button class="action-button" @click.stop="removeFavorite(idx)">取消收藏</button></div></div>
         </div>
         <div class="favorite-card-info">

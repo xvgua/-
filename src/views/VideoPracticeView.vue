@@ -3,11 +3,17 @@
     <div v-if="!isZoomed" class="normal-view">
       <div class="top-area">
         <button class="back-button" @click="$router.push('/practice')"><img src="/.figma/image/mp19p0jm-jblpzgi.svg" alt="返回"></button>
+        <div class="vps-favorite-btn" :class="{ 'vps-favorited': isFavorited }" @click="toggleFavorite">
+          <svg viewBox="0 0 30 30" fill="none">
+            <path d="M15 2.5L18.8625 10.325L27.5 11.5875L21.25 17.675L22.725 26.275L15 22.2125L7.275 26.275L8.75 17.675L2.5 11.5875L11.1375 10.325L15 2.5Z" stroke="#1E1E1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>    
         <button class="sound-btn" @click="toggleSound">
             <img v-if="!isMuted" src="/.figma/image/mp19qaqt-1du192h.svg" alt="有声音" class="sound-icon">
             <img v-else src="/.figma/image/mp19q1p9-spv9a6g.svg" alt="静音" class="sound-icon">
           </button>
         <div class="stick-figure-area">
+
           <img v-if="currentScene === 0" src="/.figma/image/mp19p0j1-t5fahwf.png" alt="动作示范1" class="stick-figure">
           <img v-else src="/.figma/image/mp1a3xqz-xbur6rc.png" alt="动作示范2" class="stick-figure">
           
@@ -36,6 +42,11 @@
       <div class="zoomed-top">
         <button class="back-button" @click="$router.push('/practice')"><img src="/.figma/image/mp19p0jm-jblpzgi.svg" alt="返回"></button>
         <button class="collapse-btn" @click="isZoomed = false"><img src="/.figma/image/mp1ak106-eg3h9nk.svg" alt="收起"></button>
+        <div class="vps-favorite-btn" :class="{ 'vps-favorited': isFavorited }" @click="toggleFavorite">
+          <svg viewBox="0 0 30 30" fill="none">
+            <path d="M15 2.5L18.8625 10.325L27.5 11.5875L21.25 17.675L22.725 26.275L15 22.2125L7.275 26.275L8.75 17.675L2.5 11.5875L11.1375 10.325L15 2.5Z" stroke="#1E1E1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>    
         <button class="sound-btn" @click="toggleSound">
           <img v-if="!isMuted" src="/.figma/image/mp19qaqt-1du192h.svg" alt="有声音">
           <img v-else src="/.figma/image/mp19q1p9-spv9a6g.svg" alt="静音">
@@ -70,12 +81,14 @@ const currentScene = ref(0)
 const isPlaying = ref(true)
 const isZoomed = ref(false)
 const isMuted = ref(false)
+const isFavorited = ref(false)
 let autoSwitchTimer = null
 let practiceTimer = null
 const SWITCH_INTERVAL = 3000
 const PRACTICE_DURATION = 20000
 
 const toggleSound = () => { isMuted.value = !isMuted.value }
+const toggleFavorite = () => { isFavorited.value = !isFavorited.value }
 const switchScene = () => { currentScene.value = currentScene.value === 0 ? 1 : 0; resetSwitch() }
 const togglePlay = () => { isPlaying.value = !isPlaying.value; isPlaying.value ? startSwitch() : stopSwitch() }
 const resetSwitch = () => { if (isPlaying.value) { stopSwitch(); startSwitch() } }
@@ -97,6 +110,10 @@ onUnmounted(() => { stopSwitch(); clearTimer() })
 .back-button { position: absolute; top: 3px; left: -1px; width: 40px; height: 40px; cursor: pointer; background: none; border: none; padding: 0; z-index: 10; }
 .back-button img { width: 40px; height: 40px; }
 .stick-figure-area { position: absolute; top: 40px; left: 33px; right: 8px; height: 322px; }
+.vps-favorite-btn { position: absolute; top: 3px; left: 285px; z-index: 10; width: 35px; height: 35px; cursor: pointer; }
+.vps-favorite-btn svg { width: 35px; height: 35px; }
+.vps-favorite-btn path { fill: none; transition: fill 0.2s ease; }
+.vps-favorite-btn.vps-favorited path { fill: #FFD700; }
 .stick-figure { width: 100%; max-width: 334px; height: 322px; object-fit: contain; }
 .sound-btn { position: absolute; top: 0; right: 0; width: 40px; height: 40px; cursor: pointer; background: none; border: none; padding: 0; z-index: 5; }
 .sound-icon { width: 40px; height: 40px; }

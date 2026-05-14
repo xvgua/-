@@ -5,6 +5,11 @@
       <div class="vd-back-btn" @click="$router.back()">
         <svg viewBox="0 0 40 40" fill="none"><path d="M25 10L15 20L25 30" stroke="#1E1E1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </div>
+      <div class="vd-favorite-btn" :class="{ 'vd-favorited': isFavorited }" @click="toggleFavorite">
+        <svg viewBox="0 0 30 30" fill="none">
+          <path d="M15 2.5L18.8625 10.325L27.5 11.5875L21.25 17.675L22.725 26.275L15 22.2125L7.275 26.275L8.75 17.675L2.5 11.5875L11.1375 10.325L15 2.5Z" stroke="#1E1E1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
       <div class="vd-audio-ctrl" @click="togglePlay">
         <svg v-if="!isPlaying" viewBox="0 0 48 48" fill="none"><path d="M16 12L36 24L16 36V12Z" stroke="#1E1E1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <svg v-else viewBox="0 0 48 48" fill="none"><rect x="14" y="12" width="6" height="24" rx="2" fill="#1E1E1E"/><rect x="28" y="12" width="6" height="24" rx="2" fill="#1E1E1E"/></svg>
@@ -106,6 +111,7 @@ import { ref, reactive, computed, onUnmounted } from 'vue'
 const currentPage = ref(1)
 const isPlaying = ref(false)
 const isStarred = ref(false)
+const isFavorited = ref(false)
 const isDetailStep = ref(false)
 const isCommentOpen = ref(false)
 const isInfoOpen = ref(false)
@@ -133,6 +139,7 @@ const togglePlay = () => {
   }
 }
 const toggleStar = () => { isStarred.value = !isStarred.value }
+const toggleFavorite = () => { isFavorited.value = !isFavorited.value }
 const toggleDetailStep = () => { isDetailStep.value = !isDetailStep.value }
 const openComment = () => { isCommentOpen.value = true }
 const closeComment = () => { isCommentOpen.value = false }
@@ -201,6 +208,30 @@ onUnmounted(() => {
 .vd-back-btn svg {
   width: 40px;
   height: 40px;
+}
+
+.vd-favorite-btn {
+  position: absolute;
+  top: 185px;
+  left: 70px;
+  z-index: 3;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.vd-favorite-btn svg {
+  width: 25px;
+  height: 25px;
+}
+
+.vd-favorite-btn path {
+  fill: none;
+  transition: fill 0.2s ease;
+}
+
+.vd-favorite-btn.vd-favorited path {
+  fill: #FFD700;
 }
 
 .vd-top-actions {
