@@ -29,7 +29,7 @@
         </div>
         <div class="playback-controls">
           <button class="control-btn" @click="switchScene"><img src="/.figma/image/mp4vrdw4-ot7oi1h.svg" alt="后退"></button>
-          <button class="control-btn" @click="togglePlay">
+          <button class="control-btn" @pointerdown="startLongPress" @pointerup="cancelLongPress" @pointerleave="cancelLongPress" @click="togglePlay">
             <img v-if="isPlaying" src="/.figma/image/mp4vtf9n-cerkzrt.svg" alt="暂停">
             <img v-else src="/.figma/image/mp4vssxc-ycn9f0u.svg" alt="播放">
           </button>
@@ -62,7 +62,7 @@
       </div>
       <div class="zoomed-controls">
         <button class="control-btn" @click="switchScene"><img src="/.figma/image/mp4vrdw4-ot7oi1h.svg" alt="后退"></button>
-        <button class="control-btn" @click="togglePlay">
+        <button class="control-btn" @pointerdown="startLongPress" @pointerup="cancelLongPress" @pointerleave="cancelLongPress" @click="togglePlay">
           <img v-if="isPlaying" src="/.figma/image/mp4vtf9n-cerkzrt.svg" alt="暂停">
           <img v-else src="/.figma/image/mp4vssxc-ycn9f0u.svg" alt="播放">
         </button>
@@ -84,8 +84,19 @@ const isMuted = ref(false)
 const isFavorited = ref(false)
 let autoSwitchTimer = null
 let practiceTimer = null
+let longPressTimer = null
 const SWITCH_INTERVAL = 3000
 const PRACTICE_DURATION = 20000
+const LONG_PRESS_DURATION = 3000
+
+const startLongPress = () => {
+  longPressTimer = setTimeout(() => {
+    router.push('/practice-complete')
+  }, LONG_PRESS_DURATION)
+}
+const cancelLongPress = () => {
+  if (longPressTimer) { clearTimeout(longPressTimer); longPressTimer = null }
+}
 
 const toggleSound = () => { isMuted.value = !isMuted.value }
 const toggleFavorite = () => { isFavorited.value = !isFavorited.value }
@@ -100,7 +111,7 @@ const startTimer = () => { clearTimer(); practiceTimer = setTimeout(() => { rout
 const clearTimer = () => { if (practiceTimer) { clearTimeout(practiceTimer); practiceTimer = null } }
 
 onMounted(() => { startSwitch(); startTimer() })
-onUnmounted(() => { stopSwitch(); clearTimer() })
+onUnmounted(() => { stopSwitch(); clearTimer(); cancelLongPress() })
 </script>
 
 <style scoped>
